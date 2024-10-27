@@ -41,7 +41,7 @@ export default function Project() {
             <Link href='https://milestone4-editable-resume-one.vercel.app/'>
             <ProjectCard
               imageSrc="/images/resume.png"
-              title="Weather App"
+              title="Resume Builder"
               description=""
               />
             </Link>
