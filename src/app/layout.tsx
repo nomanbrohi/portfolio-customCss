@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/app/components/navbar";
 import { Roboto, IBM_Plex_Sans } from "@next/font/google";
 import Footer from "@/app/components/footer"
+import './style/style.css'
 
 const roboto = Roboto({
   subsets: ['latin'],

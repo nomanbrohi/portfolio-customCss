@@ -4,46 +4,35 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function home() {
   return (
-    <section className="py-4">
+    <section className="navbar-section">
       <div className="container">
-        <div className="flex justify-between">
-          <div className="w-[40%]">
-            <h1 className="text-xl font-bold text-[#03045E]">NS</h1>
-          </div>
-          <div className="hidden w-[60%] justify-between md:flex">
+        <div className="navbar-container">
+          <div className="navbar-logo">NS</div>
+          <div className="navbar-links-container">
             <div>
-              <ul>
-                <li className="space-x-6">
-                  <Link
-                    href="/"
-                    className="rounded-md px-4 py-1 hover:bg-[#F5EE84]"
-                  >
+              <ul className="navbar-links">
+                <li>
+                  <Link href="/" className="navbar-link">
                     Home
                   </Link>
-                  <Link
-                    href="/about"
-                    className="rounded-md px-4 py-1 hover:bg-[#F5EE84]"
-                  >
+                  <Link href="/about" className="navbar-link">
                     About
                   </Link>
-                  <Link
-                    href="/contact"
-                    className="rounded-md px-4 py-1 hover:bg-[#F5EE84]"
-                  >
+                  <Link href="/contact" className="navbar-link">
                     Contact
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="flex justify-center gap-5">
-              <button>
-                <Facebook size={24} className="hover:fill-[#F5EE84] hover:text-[#f5ee84]" />
+            <div className="navbar-icons">
+              <button className="navbar-icon-button">
+                <Facebook size={24} className="navbar-icon" />
               </button>
-              <button>
-                <Instagram size={24} className="hover:fill-[#F5EE84]" />
+              <button className="navbar-icon-button">
+                <Instagram size={24} className="navbar-icon" />
               </button>
-              <button>
-                <Linkedin size={24} className="hover:fill-[#F5EE84] hover:text-[#f5ee84]"/>
+              <button className="navbar-icon-button">
+                <Linkedin size={24} className="navbar-icon" />
               </button>
             </div>
           </div>
@@ -53,17 +42,17 @@ export default function home() {
               <Menu />
             </SheetTrigger>
             <SheetContent>
-              <div className="space-y-10 py-16">
+              <div className="mobile-menu">
                 <div>
-                  <ul>
-                    <li className="flex flex-col items-center gap-10">
+                  <ul className="mobile-links">
+                    <li>
                       <Link href="/">Home</Link>
                       <Link href="/about">About</Link>
                       <Link href="/contact">Contact</Link>
                     </li>
                   </ul>
                 </div>
-                <div className="flex justify-center gap-5">
+                <div className="mobile-icons">
                   <button>
                     <Facebook size={24} />
                   </button>

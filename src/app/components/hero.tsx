@@ -3,14 +3,15 @@ import Typewriter from "typewriter-effect";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function hero() {
+
+export default function Hero() {
   return (
-    <section className="py-14">
-      <div className="container w-full">
-        <div className="flex w-full lg:flex-row items-center lg:justify-between flex-col-reverse">
-          <div className="flex lg:h-[538px] lg:w-[597px] w-full h-[200px] flex-col lg:justify-between justify-around lg:items-start items-center">
-            <div className="flex lg:w-full lg:h-[326px] w-[300px] flex-col justify-between">
-              <h1 className="IBM_Plex_Sans h-[50px] lg:auto lg:pr-[51px] lg:text-[72px] text-[24px] lg:text-left text-center uppercase leading-none">
+    <section className="hero-section">
+      <div className="hero-container container">
+        <div className="hero-content">
+          <div className="hero-text">
+            <div className="text-content">
+              <h1 className="typewriter-text">
                 <Typewriter
                   options={{
                     strings: [
@@ -21,26 +22,22 @@ export default function hero() {
                   }}
                 />
               </h1>
-              <p className="IBM_Play_Sans lg:text-[24px] text-base lg:text-left text-center">
-                <span className="font-bold italic">developer</span> based in
-                Karachi
+              <p className="description">
+                <span className="developer-highlight">developer</span> based in Karachi
               </p>
             </div>
-            <Link href='https://linkedin.com/in/noman-shahnawaz-545077228' target="_blank">
-            <button className="IBM_Play_Sans h-[56px] w-[258px] bg-[#F5EE84] text-white hover:text-black hover:font-bold">
-              lets talk with me
-            </button>
+            <Link href="https://linkedin.com/in/noman-shahnawaz-545077228" target="_blank">
+              <button className="contact-button">lets talk with me</button>
             </Link>
           </div>
-          <div className="lg:h-[750px] lg:w-[660px] lg:flex items-center justify-center">
+          <div className="profile-image-container">
             <Image
-            src="/images/profile.jpg" 
-            alt="Profile Image" 
-            width={500} 
-            height={300} 
-            className="rounded-full">
-
-            </Image>
+              src="/images/profile.jpg"
+              alt="Profile Image"
+              width={500}
+              height={300}
+              className="profile-image"
+            />
           </div>
         </div>
       </div>
